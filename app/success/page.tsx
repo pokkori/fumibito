@@ -43,6 +43,15 @@ export default function SuccessPage() {
           >
             トップページに戻る
           </Link>
+          <a
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("AIで心のこもった手紙を作りました！ #ふみびと #AI手紙 https://fumibito.vercel.app")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs px-3 py-1.5 rounded-lg bg-black hover:bg-gray-800 text-white font-medium transition-colors inline-flex items-center justify-center min-h-[44px]"
+            aria-label="ふみびとを使ったことをXにシェアする"
+          >
+            Xにシェア
+          </a>
         </div>
       </div>
     </main>

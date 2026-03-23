@@ -370,7 +370,15 @@ export default function RegisterPage() {
           plan={selectedPlan}
           extraBody={extraBody}
           apiPath="/api/payjp/checkout"
-          onSuccess={() => router.push("/success")}
+          onSuccess={() => {
+            const params = new URLSearchParams({
+              name: form.name,
+              interests: form.interests.join(","),
+              tone: form.tone,
+              worry: form.worry,
+            });
+            router.push(`/success?${params.toString()}`);
+          }}
           onClose={() => setShowModal(false)}
         />
       )}

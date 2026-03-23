@@ -1,4 +1,5 @@
 import Link from "next/link";
+import StreakBadge from "@/components/StreakBadge";
 
 export default function HomePage() {
   return (
@@ -7,13 +8,16 @@ export default function HomePage() {
       <header className="sticky top-0 z-40 border-b border-amber-100 bg-white/90 backdrop-blur">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
           <span className="text-lg font-bold text-amber-900">✉️ ふみびと</span>
-          <Link
-            href="/register"
-            className="bg-amber-500 hover:bg-amber-600 text-white text-sm font-bold px-4 py-2 rounded-full transition-colors min-h-[44px] inline-flex items-center"
-            aria-label="無料で1通手紙をもらう登録ページへ進む"
-          >
-            無料で1通もらう
-          </Link>
+          <div className="flex items-center gap-3">
+            <StreakBadge />
+            <Link
+              href="/register"
+              className="bg-amber-500 hover:bg-amber-600 text-white text-sm font-bold px-4 py-2 rounded-full transition-colors min-h-[44px] inline-flex items-center"
+              aria-label="無料で1通手紙をもらう登録ページへ進む"
+            >
+              無料で1通もらう
+            </Link>
+          </div>
         </div>
       </header>
 

@@ -79,8 +79,8 @@ export default function HomePage() {
               { icon: "", text: "記録が\n続かない" },
               { icon: "", text: "プレゼントに\n迷う" },
             ].map((item) => (
-              <div key={item.text} className="bg-white rounded-xl p-4 shadow-sm">
-                <div className="text-3xl mb-2">{item.icon}</div>
+              <div key={item.text} className="rounded-xl p-4 shadow-sm" style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)' }}>
+                <div className="text-3xl mb-2" aria-hidden="true">{item.icon}</div>
                 <p className="text-sm text-gray-700 font-medium whitespace-pre-line">{item.text}</p>
               </div>
             ))}

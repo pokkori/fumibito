@@ -59,6 +59,7 @@ export default function UnsubscribePage() {
               <button
                 type="submit"
                 disabled={loading}
+                aria-label="解約する"
                 className="w-full bg-gray-700 hover:bg-gray-800 text-white font-bold py-3 rounded-xl transition-colors disabled:opacity-50"
               >
                 {loading ? "処理中..." : "解約する"}

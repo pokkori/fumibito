@@ -106,6 +106,7 @@ export default function PayjpModal({
           <h2 className="text-xl font-bold text-amber-900">カード決済</h2>
           <button
             onClick={onClose}
+            aria-label="決済モーダルを閉じる"
             className="text-gray-400 hover:text-gray-600 text-2xl leading-none font-light"
           >
             ×
@@ -133,6 +134,7 @@ export default function PayjpModal({
         <button
           onClick={handlePay}
           disabled={!cardReady || loading}
+          aria-label="決済を確定する"
           className="w-full bg-amber-500 text-white font-bold py-3 rounded-xl hover:bg-amber-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors mt-4"
         >
           {loading ? "処理中..." : "登録して手紙を受け取る"}

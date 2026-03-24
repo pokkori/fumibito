@@ -146,6 +146,8 @@ export default function RegisterPage() {
                 <button
                   key={item}
                   onClick={() => toggleInterest(item)}
+                  aria-label={`${item}を${form.interests.includes(item) ? "選択解除" : "選択"}する`}
+                  aria-pressed={form.interests.includes(item)}
                   className={`px-3 py-2 rounded-full text-sm font-medium border-2 transition-colors ${
                     form.interests.includes(item)
                       ? "bg-amber-500 border-amber-500 text-white"
@@ -193,6 +195,8 @@ export default function RegisterPage() {
                 <button
                   key={t.key}
                   onClick={() => setForm({ ...form, tone: t.key as typeof form.tone })}
+                  aria-label={`文体を${t.label}に設定する`}
+                  aria-pressed={form.tone === t.key}
                   className={`w-full text-left border-2 rounded-xl px-4 py-4 transition-colors ${
                     form.tone === t.key
                       ? "border-amber-500 bg-amber-50"
@@ -278,6 +282,8 @@ export default function RegisterPage() {
             <div className="space-y-4">
               <button
                 onClick={() => setSelectedPlan("standard")}
+                aria-label="スタンダードプランを選択する"
+                aria-pressed={selectedPlan === "standard"}
                 className={`w-full text-left border-2 rounded-2xl p-5 transition-colors ${
                   selectedPlan === "standard" ? "border-amber-500 bg-amber-50" : "border-amber-100 hover:border-amber-300"
                 }`}
@@ -298,6 +304,8 @@ export default function RegisterPage() {
 
               <button
                 onClick={() => setSelectedPlan("premium")}
+                aria-label="プレミアムプランを選択する"
+                aria-pressed={selectedPlan === "premium"}
                 className={`w-full text-left border-2 rounded-2xl p-5 transition-colors relative ${
                   selectedPlan === "premium" ? "border-amber-500 bg-amber-500 text-white" : "border-amber-300 hover:border-amber-500"
                 }`}

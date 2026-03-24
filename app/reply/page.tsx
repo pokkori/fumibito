@@ -65,6 +65,7 @@ export default function ReplyPage() {
           <button
             type="submit"
             disabled={loading || !content.trim()}
+            aria-label="返信文を生成する"
             className="w-full bg-amber-500 hover:bg-amber-600 text-white font-black py-4 rounded-2xl disabled:opacity-40 disabled:cursor-not-allowed transition-all"
           >
             {loading ? "送信中..." : "返信を送る ️"}

@@ -37,7 +37,7 @@ export default function ReplyPage() {
   return (
     <main className="min-h-screen flex flex-col items-center px-4 py-12" style={{ background: "#fffdf8" }}>
       <div className="max-w-md w-full">
-        <Link href="/" className="text-lg font-bold text-amber-900 block mb-8 text-center">✉️ ふみびと</Link>
+        <Link href="/" className="text-lg font-bold text-amber-900 block mb-8 text-center">️ ふみびと</Link>
 
         <h1 className="text-xl font-black text-amber-950 mb-3">AIへの返信</h1>
         <p className="text-sm text-gray-500 mb-6 leading-relaxed">
@@ -67,7 +67,7 @@ export default function ReplyPage() {
             disabled={loading || !content.trim()}
             className="w-full bg-amber-500 hover:bg-amber-600 text-white font-black py-4 rounded-2xl disabled:opacity-40 disabled:cursor-not-allowed transition-all"
           >
-            {loading ? "送信中..." : "返信を送る ✉️"}
+            {loading ? "送信中..." : "返信を送る ️"}
           </button>
         </form>
 

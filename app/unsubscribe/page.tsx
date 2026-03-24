@@ -26,11 +26,11 @@ export default function UnsubscribePage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4 py-16" style={{ background: "#fffdf8" }}>
       <div className="max-w-md w-full text-center">
-        <Link href="/" className="text-lg font-bold text-amber-900 block mb-8">✉️ ふみびと</Link>
+        <Link href="/" className="text-lg font-bold text-amber-900 block mb-8">️ ふみびと</Link>
 
         {submitted ? (
           <div>
-            <div className="text-4xl mb-4">💌</div>
+            <div className="text-4xl mb-4"></div>
             <h1 className="text-xl font-black text-amber-950 mb-4">解約申請を受け付けました</h1>
             <p className="text-sm text-gray-600 leading-relaxed mb-8">
               次回更新日の請求は発生しません。<br />

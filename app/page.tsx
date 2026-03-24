@@ -7,7 +7,7 @@ export default function HomePage() {
       {/* ヘッダー */}
       <header className="sticky top-0 z-40 border-b border-amber-100 bg-white/90 backdrop-blur">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
-          <span className="text-lg font-bold text-amber-900">✉️ ふみびと</span>
+          <span className="text-lg font-bold text-amber-900">️ ふみびと</span>
           <div className="flex items-center gap-3">
             <StreakBadge />
             <Link
@@ -45,7 +45,7 @@ export default function HomePage() {
 
       {/* サンプル手紙 */}
       <section className="max-w-xl mx-auto px-4 mb-16">
-        <div className="bg-white rounded-2xl shadow-md border border-amber-100 p-8 relative">
+        <div style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '16px' }} className="shadow-md p-8 relative">
           <div className="absolute -top-3 left-6 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">
             サンプル手紙
           </div>
@@ -75,9 +75,9 @@ export default function HomePage() {
           </p>
           <div className="grid grid-cols-3 gap-4">
             {[
-              { icon: "😔", text: "話し相手が\nいない" },
-              { icon: "📝", text: "記録が\n続かない" },
-              { icon: "🎁", text: "プレゼントに\n迷う" },
+              { icon: "", text: "話し相手が\nいない" },
+              { icon: "", text: "記録が\n続かない" },
+              { icon: "", text: "プレゼントに\n迷う" },
             ].map((item) => (
               <div key={item.text} className="bg-white rounded-xl p-4 shadow-sm">
                 <div className="text-3xl mb-2">{item.icon}</div>
@@ -97,7 +97,7 @@ export default function HomePage() {
             { step: "2", title: "AIがあなたの手紙を書く", desc: "前月の内容を覚えながら、毎月違う内容をお届け。" },
             { step: "3", title: "毎月5〜10日頃に届く", desc: "封筒に入った物理的な手紙が自宅に届きます。" },
           ].map((item) => (
-            <div key={item.step} className="flex items-start gap-4 bg-white rounded-xl p-5 border border-amber-100 shadow-sm">
+            <div key={item.step} style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '12px' }} className="flex items-start gap-4 p-5 shadow-sm">
               <div className="w-10 h-10 bg-amber-500 text-white rounded-full flex items-center justify-center font-black text-lg shrink-0">
                 {item.step}
               </div>
@@ -114,15 +114,15 @@ export default function HomePage() {
       <section className="max-w-2xl mx-auto px-4 mb-16">
         <h2 className="text-xl font-black text-amber-950 text-center mb-8">料金プラン</h2>
         <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-white rounded-2xl border-2 border-amber-200 p-6 shadow-sm">
+          <div style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '2px solid rgba(245,158,11,0.4)', borderRadius: '16px' }} className="shadow-sm p-6">
             <p className="text-sm font-bold text-amber-600 mb-1">スタンダード</p>
             <p className="text-3xl font-black text-amber-950 mb-1">¥980<span className="text-sm font-normal text-gray-400">/月</span></p>
             <p className="text-xs text-gray-400 mb-4">初月無料</p>
             <ul className="space-y-2 text-sm text-gray-700">
-              <li className="flex items-start gap-2"><span className="text-amber-500 shrink-0">✓</span>毎月1通・A4サイズ</li>
-              <li className="flex items-start gap-2"><span className="text-amber-500 shrink-0">✓</span>AIが前月を記憶して継続</li>
-              <li className="flex items-start gap-2"><span className="text-amber-500 shrink-0">✓</span>普通郵便でお届け</li>
-              <li className="flex items-start gap-2"><span className="text-amber-500 shrink-0">✓</span>いつでも解約可能</li>
+              <li className="flex items-start gap-2"><span className="text-amber-500 shrink-0"></span>毎月1通・A4サイズ</li>
+              <li className="flex items-start gap-2"><span className="text-amber-500 shrink-0"></span>AIが前月を記憶して継続</li>
+              <li className="flex items-start gap-2"><span className="text-amber-500 shrink-0"></span>普通郵便でお届け</li>
+              <li className="flex items-start gap-2"><span className="text-amber-500 shrink-0"></span>いつでも解約可能</li>
             </ul>
           </div>
           <div className="bg-amber-500 rounded-2xl border-2 border-amber-500 p-6 shadow-md relative">
@@ -131,15 +131,15 @@ export default function HomePage() {
             <p className="text-3xl font-black text-white mb-1">¥1,980<span className="text-sm font-normal text-amber-200">/月</span></p>
             <p className="text-xs text-amber-200 mb-4">初月無料</p>
             <ul className="space-y-2 text-sm text-white">
-              <li className="flex items-start gap-2"><span className="shrink-0">✓</span>スタンダードの全機能</li>
-              <li className="flex items-start gap-2"><span className="shrink-0">✓</span>月1回Webで返信できる</li>
-              <li className="flex items-start gap-2"><span className="shrink-0">✓</span>特殊デザイン封筒</li>
-              <li className="flex items-start gap-2"><span className="shrink-0">✓</span>誕生日月は特別デザイン</li>
+              <li className="flex items-start gap-2"><span className="shrink-0"></span>スタンダードの全機能</li>
+              <li className="flex items-start gap-2"><span className="shrink-0"></span>月1回Webで返信できる</li>
+              <li className="flex items-start gap-2"><span className="shrink-0"></span>特殊デザイン封筒</li>
+              <li className="flex items-start gap-2"><span className="shrink-0"></span>誕生日月は特別デザイン</li>
             </ul>
           </div>
         </div>
-        <div className="mt-4 bg-white rounded-xl border border-amber-100 p-5 text-center">
-          <p className="text-sm font-bold text-amber-900 mb-1">🎁 ギフトプラン</p>
+        <div style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '12px' }} className="mt-4 p-5 text-center">
+          <p className="text-sm font-bold text-amber-900 mb-1"> ギフトプラン</p>
           <p className="text-xs text-gray-500">3ヶ月分 ¥4,200 / 6ヶ月分 ¥7,800 — 贈り先住所に直接届きます</p>
         </div>
       </section>
@@ -155,10 +155,10 @@ export default function HomePage() {
             { q: "プレゼントで別の住所に送れますか？", a: "ギフトプランをご利用ください。贈り先の方がご自身で住所を登録する形になります。" },
             { q: "解約はいつでもできますか？", a: "はい。マイページからいつでも解約できます。解約後は次の更新日まで利用可能です。" },
           ].map((item) => (
-            <details key={item.q} className="bg-white rounded-xl border border-amber-100 p-5 group cursor-pointer">
+            <details key={item.q} style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '12px' }} className="p-5 group cursor-pointer">
               <summary className="font-bold text-sm text-amber-950 list-none flex justify-between items-center">
                 {item.q}
-                <span className="text-amber-400 group-open:rotate-180 transition-transform">▼</span>
+                <span className="text-amber-400 group-open:rotate-180 transition-transform"></span>
               </summary>
               <p className="mt-3 text-sm text-gray-600 leading-relaxed">{item.a}</p>
             </details>

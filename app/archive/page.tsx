@@ -30,7 +30,7 @@ export default async function ArchivePage() {
     <main className="min-h-screen" style={{ background: "#fffdf8" }}>
       <header className="sticky top-0 z-40 border-b border-amber-100 bg-white/90 backdrop-blur">
         <div className="max-w-2xl mx-auto px-4 h-14 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold text-amber-900">✉️ ふみびと</Link>
+          <Link href="/" className="text-lg font-bold text-amber-900">️ ふみびと</Link>
           <span className="text-xs text-amber-600 font-medium">
             {user.plan === "premium" ? "プレミアム" : "スタンダード"}
           </span>
@@ -43,7 +43,7 @@ export default async function ArchivePage() {
 
         {!letters || letters.length === 0 ? (
           <div className="bg-white rounded-2xl border border-amber-100 p-10 text-center">
-            <div className="text-4xl mb-4">✉️</div>
+            <div className="text-4xl mb-4">️</div>
             <p className="text-gray-500">まだ手紙がありません。毎月5〜10日頃にお届けします。</p>
           </div>
         ) : (
@@ -77,7 +77,7 @@ export default async function ArchivePage() {
 
         {user.plan === "premium" && (
           <div className="mt-8 bg-amber-50 rounded-2xl border border-amber-200 p-6">
-            <p className="font-bold text-amber-900 mb-2">✉️ AIに返信する</p>
+            <p className="font-bold text-amber-900 mb-2">️ AIに返信する</p>
             <p className="text-sm text-gray-600 mb-4">
               今月の手紙に返事を書くと、来月の手紙に反映されます。（月1回）
             </p>

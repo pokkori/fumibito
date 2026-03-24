@@ -88,7 +88,7 @@ export default function SuccessPage() {
       style={{ background: "#fffdf8" }}
     >
       <div className="max-w-md w-full">
-        <div className="text-6xl mb-6">✉️</div>
+        <div className="text-6xl mb-6">️</div>
         <h1 className="text-2xl font-black text-amber-950 mb-4">
           登録が完了しました！
         </h1>

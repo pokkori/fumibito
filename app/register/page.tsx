@@ -92,7 +92,7 @@ export default function RegisterPage() {
     <main className="min-h-screen flex flex-col items-center px-4 py-12" style={{ background: "#fffdf8" }}>
       {/* ヘッダー */}
       <div className="mb-8 text-center">
-        <span className="text-2xl font-black text-amber-900">✉️ ふみびと</span>
+        <span className="text-2xl font-black text-amber-900">️ ふみびと</span>
         <p className="text-sm text-gray-500 mt-1">登録フォーム</p>
       </div>
 
@@ -110,7 +110,7 @@ export default function RegisterPage() {
                   : "bg-amber-100 text-amber-400"
               }`}
             >
-              {currentStepNum > i + 1 ? "✓" : s}
+              {currentStepNum > i + 1 ? "" : s}
             </div>
           ))}
         </div>
@@ -186,9 +186,9 @@ export default function RegisterPage() {
             <p className="text-sm text-gray-500 mb-5">どんなトーンで書いてほしいですか？</p>
             <div className="space-y-3 mb-8">
               {[
-                { key: "warm", label: "🤗 温かく・共感的", desc: "まるで古い友人のような自然な文体" },
-                { key: "formal", label: "📜 丁寧で品のある", desc: "落ち着いた大人の手紙" },
-                { key: "cheerful", label: "☀️ 明るく元気に", desc: "ポジティブで気分が上がる手紙" },
+                { key: "warm", label: " 温かく・共感的", desc: "まるで古い友人のような自然な文体" },
+                { key: "formal", label: " 丁寧で品のある", desc: "落ち着いた大人の手紙" },
+                { key: "cheerful", label: "️ 明るく元気に", desc: "ポジティブで気分が上がる手紙" },
               ].map((t) => (
                 <button
                   key={t.key}
@@ -205,7 +205,7 @@ export default function RegisterPage() {
               ))}
             </div>
             <div>
-              <p className="font-bold text-amber-950 mb-2 text-sm">🎂 誕生日（任意）</p>
+              <p className="font-bold text-amber-950 mb-2 text-sm"> 誕生日（任意）</p>
               <p className="text-xs text-gray-500 mb-3">誕生日月に特別なメッセージをお届けします</p>
               <input
                 type="date"
@@ -290,9 +290,9 @@ export default function RegisterPage() {
                 </div>
                 <p className="text-2xl font-black text-amber-950">¥980<span className="text-sm font-normal text-gray-400">/月</span></p>
                 <ul className="mt-3 space-y-1 text-sm text-gray-600">
-                  <li>✓ 毎月1通・AIパーソナライズ手紙</li>
-                  <li>✓ AIが前月を記憶して継続</li>
-                  <li>✓ 普通郵便でお届け</li>
+                  <li> 毎月1通・AIパーソナライズ手紙</li>
+                  <li> AIが前月を記憶して継続</li>
+                  <li> 普通郵便でお届け</li>
                 </ul>
               </button>
 
@@ -313,10 +313,10 @@ export default function RegisterPage() {
                   ¥1,980<span className="text-sm font-normal opacity-70">/月</span>
                 </p>
                 <ul className={`mt-3 space-y-1 text-sm ${selectedPlan === "premium" ? "text-amber-100" : "text-gray-600"}`}>
-                  <li>✓ スタンダードの全機能</li>
-                  <li>✓ 月1回Webで返信できる</li>
-                  <li>✓ 特殊デザイン封筒</li>
-                  <li>✓ 誕生日月は特別デザイン</li>
+                  <li> スタンダードの全機能</li>
+                  <li> 月1回Webで返信できる</li>
+                  <li> 特殊デザイン封筒</li>
+                  <li> 誕生日月は特別デザイン</li>
                 </ul>
               </button>
             </div>
@@ -326,16 +326,16 @@ export default function RegisterPage() {
         {/* 決済ボタン表示ステップ */}
         {step === "payment" && (
           <div className="text-center">
-            <div className="text-5xl mb-4">✉️</div>
+            <div className="text-5xl mb-4">️</div>
             <h2 className="text-xl font-black text-amber-950 mb-3">最後のステップです</h2>
             <p className="text-sm text-gray-600 mb-6 leading-relaxed">
               カード情報を登録して、<br />
               {form.name}さんへの手紙を始めましょう。
             </p>
             <div className="bg-amber-50 rounded-xl border border-amber-100 p-4 mb-6 text-left text-sm space-y-1 text-gray-700">
-              <p>✉️ 毎月5〜10日頃にお届け</p>
-              <p>🔄 初月無料・翌月から課金開始</p>
-              <p>🚪 マイページからいつでも解約可能</p>
+              <p>️ 毎月5〜10日頃にお届け</p>
+              <p> 初月無料・翌月から課金開始</p>
+              <p> マイページからいつでも解約可能</p>
             </div>
             <button
               onClick={() => setShowModal(true)}

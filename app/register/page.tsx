@@ -116,7 +116,7 @@ export default function RegisterPage() {
         </div>
       )}
 
-      <div className="w-full max-w-md bg-white rounded-2xl border border-amber-100 shadow-sm p-8">
+      <div className="w-full max-w-md backdrop-blur-md bg-white/90 border border-amber-100 shadow-sm rounded-2xl p-8">
         {/* Step 1: 呼び名 */}
         {step === 1 && (
           <div>

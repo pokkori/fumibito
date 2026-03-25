@@ -7,7 +7,7 @@ export default function HomePage() {
       {/* ヘッダー */}
       <header className="sticky top-0 z-40 border-b border-amber-100 bg-white/90 backdrop-blur">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
-          <span className="text-lg font-bold text-amber-900">️ ふみびと</span>
+          <span className="text-lg font-bold text-amber-900" aria-label="ふみびと トップへ戻る">ふみびと</span>
           <div className="flex items-center gap-3">
             <StreakBadge />
             <Link
@@ -156,14 +156,32 @@ export default function HomePage() {
             { q: "解約はいつでもできますか？", a: "はい。マイページからいつでも解約できます。解約後は次の更新日まで利用可能です。" },
           ].map((item) => (
             <details key={item.q} style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '12px' }} className="p-5 group cursor-pointer">
-              <summary className="font-bold text-sm text-amber-950 list-none flex justify-between items-center">
+              <summary className="font-bold text-sm text-amber-950 list-none flex justify-between items-center" aria-label={`よくある質問: ${item.q}`}>
                 {item.q}
-                <span className="text-amber-400 group-open:rotate-180 transition-transform"></span>
+                <span className="text-amber-400 group-open:rotate-180 transition-transform" aria-hidden="true"></span>
               </summary>
               <p className="mt-3 text-sm text-gray-600 leading-relaxed">{item.a}</p>
             </details>
           ))}
         </div>
+      </section>
+
+      {/* Xシェアボタン */}
+      <section className="max-w-xl mx-auto px-4 mb-10 text-center">
+        <p className="text-sm text-gray-500 mb-3">気に入ったら友達にシェアしてみませんか？</p>
+        <a
+          href={`https://x.com/intent/tweet?text=${encodeURIComponent("AIが毎月あなたへ手紙を書いてくれる「ふみびと」。自分の話を聞いてもらえる感覚がある。 #ふみびと https://fumibito.vercel.app")}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="ふみびとをXでシェアする"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl font-bold text-white min-h-[44px] transition-all active:scale-95 hover:opacity-90"
+          style={{ background: "#000" }}
+        >
+          <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+          Xでシェアする
+        </a>
       </section>
 
       {/* 最終CTA */}

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const SITE_URL = "https://fumibito.vercel.app";
@@ -19,6 +21,7 @@ export const metadata: Metadata = {
     siteName: "ふみびと",
     locale: "ja_JP",
     type: "website",
+    images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: "ふみびと" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -72,6 +75,62 @@ const jsonLd = {
             text: "はい、いつでも解約可能です。次回の更新前に解約すれば翌月分の請求は発生しません。",
           },
         },
+        {
+          "@type": "Question",
+          name: "初月無料とはどういう仕組みですか？",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "初月は無料で手紙をお届けします。2ヶ月目以降は月額980円（スタンダードプラン）が発生します。初月無料期間中に解約いただければ費用は一切かかりません。",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "手紙は本物の紙で届きますか？",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "はい、AIが書いた内容を印刷・封入して、実際のポストに郵送します。デジタルではなくアナログな紙の手紙としてお手元に届きます。",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "自分の情報はどのように使われますか？",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "ご登録いただいたお名前・趣味・状況はAIが手紙を生成するためにのみ使用します。第三者への提供や広告目的での利用は一切行いません。詳細はプライバシーポリシーをご確認ください。",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "手紙の内容は毎月違いますか？",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "はい。AIが前月の手紙の内容を記憶して、会話が続くように次の手紙を書きます。季節や出来事を反映したパーソナルな内容になるため、毎月新鮮な手紙をお楽しみいただけます。",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "プランの変更はできますか？",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "はい、マイページからプランの変更が可能です。スタンダード（¥980/月）からプレミアム（¥1,980/月）へのアップグレードや、ダウングレードも対応しています。",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "贈り物として送ることはできますか？",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "はい、ギフト機能に対応しています。相手の住所とプロフィール情報を入力して申し込むことで、大切な方への特別なプレゼントとして手紙を定期的にお届けできます。",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "海外在住でも利用できますか？",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "現在は日本国内の住所のみ対応しています。海外発送には対応しておりません。海外在住の方からのご要望が多い場合は対応を検討いたします。",
+          },
+        },
       ],
     },
   ],
@@ -89,8 +148,17 @@ export default function RootLayout({
         />
       </head>
       <body>
+        {(process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID ?? 'ca-pub-XXXXXXXX') !== 'ca-pub-XXXXXXXX' && (
+          <Script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+        )}
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { haptics } from "@/utils/haptics";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 
@@ -56,6 +57,7 @@ export default function RegisterPage() {
   };
 
   const nextStep = () => {
+    haptics.tap();
     if (step === 1) setStep(2);
     else if (step === 2) setStep(3);
     else if (step === 3) setStep(4);
